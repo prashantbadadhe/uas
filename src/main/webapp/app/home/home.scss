@@ -4,10 +4,10 @@ Main page styles
 
 .hipster {
   display: inline-block;
-  width: 347px;
-  height: 497px;
-  background: url('../../content/images/jhipster_family_member_3.svg') no-repeat center top;
-  background-size: contain;
+  width: 100%;
+  height: 550px;
+  background: url('../../content/images/uni.jpg') no-repeat center top;
+  background-size: auto;
 }
 
 /* wait autoprefixer update to allow simple generation of high pixel density media query */
@@ -17,7 +17,7 @@ Main page styles
   only screen and (min-resolution: 192dpi),
   only screen and (min-resolution: 2dppx) {
   .hipster {
-    background: url('../../content/images/jhipster_family_member_3.svg') no-repeat center top;
+    background: url('../../content/images/uni.jpg') no-repeat center top;
     background-size: contain;
   }
 }
