@@ -30,7 +30,7 @@
             <form name="form" role="form" (ngSubmit)="register()" [formGroup]="registerForm" *ngIf="!success">
                 <div class="form-group">
                     <label class="form-control-label" for="login" jhiTranslate="global.form.username.label">Username</label>
-                    <input type="text" class="form-control" id="login" name="login" placeholder="{{ 'global.form.username.placeholder' | translate }}"
+                    <input type="text" class="form-control" id="login" name="login"
                            formControlName="login" #login>
 
                     <div *ngIf="registerForm.get('login')!.invalid && (registerForm.get('login')!.dirty || registerForm.get('login')!.touched)">
@@ -62,7 +62,7 @@
 
                 <div class="form-group">
                     <label class="form-control-label" for="email" jhiTranslate="global.form.email.label">Email</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="{{ 'global.form.email.placeholder' | translate }}"
+                    <input type="email" class="form-control" id="email" name="email" 
                              formControlName="email">
 
                     <div *ngIf="registerForm.get('email')!.invalid && (registerForm.get('email')!.dirty || registerForm.get('email')!.touched)">
@@ -94,7 +94,7 @@
 
                 <div class="form-group">
                     <label class="form-control-label" for="password" jhiTranslate="global.form.newpassword.label">New password</label>
-                    <input type="password" class="form-control" id="password" name="password" placeholder="{{ 'global.form.newpassword.placeholder' | translate }}"
+                    <input type="password" class="form-control" id="password" name="password"
                             formControlName="password">
 
                     <div *ngIf="registerForm.get('password')!.invalid && (registerForm.get('password')!.dirty || registerForm.get('password')!.touched)">
@@ -122,7 +122,7 @@
 
                 <div class="form-group">
                     <label class="form-control-label" for="confirmPassword" jhiTranslate="global.form.confirmpassword.label">New password confirmation</label>
-                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="{{ 'global.form.confirmpassword.placeholder' | translate }}"
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
                             formControlName="confirmPassword">
 
                     <div *ngIf="registerForm.get('confirmPassword')!.invalid && (registerForm.get('confirmPassword')!.dirty || registerForm.get('confirmPassword')!.touched)">
