@@ -13,6 +13,13 @@
 # http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html
 # ===================================================================
 
+eureka:
+  client:
+    enabled: false
+  instance:
+    appname: uas
+    instanceId: uas:${spring.application.instance-id:${random.value}}
+
 spring:
   profiles:
     # Uncomment the following line to enable tests against production database type rather than H2, using Testcontainers
@@ -94,9 +101,12 @@ jhipster:
     from: test@localhost
     base-url: http://127.0.0.1:8080
   security:
-    remember-me:
-      # security key (this key should be unique for your application, and kept secret)
-      key: f3c71ea8d38892c73d6c281bf0c378828c6649b6f3a581dee605acd090ed1be2ebb05aa8a1c425fe8e80862923f68618404e
+    authentication:
+      jwt:
+        # This token must be encoded using Base64 (you can type `echo 'secret-key'|base64` on your command line)
+        base64-secret: MTJmZjE2NzIzNTJkMDdjNzMyZjljMDcxM2Y3NDNlNzVlYWU0MjU0NmM1MjBiYjg0NjJiYmQ5NDc1ZjhjYjU2NWUzNzljOWJlMDZjMzNkMzI4NDc1NjA3NDcyZDgzZDVjOGNiNjNjNjk4ZDViMzBhMGM3NDg5MWQ5MmJmMTNkMDE=
+        # Token is valid 24 hours
+        token-validity-in-seconds: 86400
   metrics:
     logs: # Reports metrics in the logs
       enabled: true
